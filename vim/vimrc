@@ -147,7 +147,7 @@ call plug#end()
 """"""""""""""""""""""""
 " Colors
 syntax enable
-if ($USER == "ty" || $USER == "tyrocca")
+if ($USER == "ty" || $USER == "tyrocca" || $USER == "ojas")
     set t_Co=256
     if ($terminal_background == "light")
         set background=light
