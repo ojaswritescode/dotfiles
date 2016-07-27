@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/tyrocca/.oh-my-zsh
+export ZSH=/Users/ojas-sathe/.oh-my-zsh
 
-DEFAULT_USER=tyrocca
+DEFAULT_USER=ojas-sathe
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -63,6 +63,56 @@ export PATH="//anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X1
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+export EDITOR="vim"
+
+# wipe out swap files
+ls_swp() {
+    find . -name *swp
+}
+
+rm_swp() {
+    find . -name *swp -delete;
+}
+
+###########
+# Styling #
+###########
+
+# configure colors
+reset_color=`tput sgr0`;
+green_color=`tput setaf 2`;
+red_color=`tput setaf 1`;
+purple_color=`tput setaf 5`;
+
+# commands to print messages of different colors
+green(){
+    echo "${green_color}$1${reset_color}";
+}
+purple(){
+    echo "${purple_color}$1${reset_color}";
+}
+red(){
+    echo "${red_color}$1${reset_color}";
+}
+
+#################
+# Fun Functions #
+#################
+
+quorum_text () {
+    echo "";
+    purple "Development | Dev Env for $USER *";
+    echo "";
+}
+quorum_text
+
+# fun cow thing
+# fortune
+#| cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat
+echo ""
+
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
