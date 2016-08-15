@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias tommy='~/developer/practice/./tommy.py ~/developer/practice/quotes.txt'
 # vi mode
 export KEYTIMEOUT=1
 
